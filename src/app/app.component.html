@@ -1,21 +1,90 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="nav-con">
+  <a class="nav-icon-top round" (click)="jump(panel1)">1</a>
+  <a class="nav-icon-2 round" (click)="jump(panel2)">2</a>
+  <a class="nav-icon-3 round" (click)="jump(panel3)">3</a>
+  <a class="nav-icon-4 round" (click)="jump(panel4)">4</a>
+  <a class="nav-icon-5 round" (click)="jump(panel5)">5</a>
+  <a class="nav-icon-bottom round"(click)="jump(panel1)">6</a>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="container">
+    <div #content id="content">
+      <div #panel1 id="panel1" name="first" style="height: 100vh; width:100vw;color:whitesmoke;padding-right: 48px">
+          <div class="container-fluid h-100" style="padding: 30px">
+              <p class="display-1" style="text-align: left">Berger Paints</p>
+              <div class="row align-items-center h-100">
+                  <div class="col mx-auto" style="text-align: left">
+                      <p class="display-4">Silk Illusions Vintage Finish</p>
+                      <p>A water-based interior texture emulsion for interior puttied/POP/wooden surfaces.
+                          Vintage Finish is a water based interior texture emulsion that can be used on interior puttied/POP/wooden surfaces. This material is thick and can be applied using Steel Trowel followed by other tools to make unique patterns. Specific recommended quality of colourants needs to be added for the desired Vintage shade. Silk Illusions Design Metallica can be used as a top coat to get the desired look in some of the Vintage Finish </p>
+                  </div>
 
-<router-outlet></router-outlet>
+                  <div class="col mx-auto">
+                      <img src="https://www.bergerpaints.com/upload/product/silk-illusions-marble-finish.jpg" alt="product" style="opacity: 0.7" height="100%" width="100%">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div #panel2 id="panel2" style="height: 100vh; width:100vw;color: whitesmoke">
+          <div class="container-fluid h-100" style="padding: 30px">
+            <p class="display-1" style="text-align: left">Variants</p>
+              <div class="row align-items-center h-100">
+                  <div class="col mx-auto" style="text-align: center">
+                      <img src="https://www.bergerpaints.com/upload/product/silk-illusions-design-metallica.png" alt="product" style="opacity: 0.7">
+                  </div>
+
+                  <div class="col mx-auto" style="text-align: center">
+                      <img src="https://www.bergerpaints.com/upload/product/silk-illusions-vintage-finish.png" alt="product" style="opacity: 0.7">
+                  </div>
+
+                  <div class="col mx-auto" style="text-align: center">
+                      <img src="https://www.bergerpaints.com/upload/product/silk-illusions-marble-finish.png" alt="product" style="opacity: 0.7">
+                  </div>
+
+                  <div class="col mx-auto" style="text-align: center">
+                      <img src="https://www.bergerpaints.com/upload/product/silk-illusions-non-metallic.png" alt="product" style="opacity: 0.7">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div #panel3 id="panel3" style="height: 100vh; width:100vw;color: rgb(236, 138, 26)">
+          <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-6 mx-auto">
+                      <div class="jumbotron">
+                          of 
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <a (click) = "jump(panel2)" class="a-nav-top">PREV</a>&nbsp;  
+          <a (click) = "jump(panel4)" class="a-nav-bottom">NEXT</a>
+      </div>
+
+      <div #panel4 id="panel4" style="height: 100vh; width:100vw;color: brown">
+          <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-6 mx-auto">
+                      <div class="jumbotron">
+                          SHIT 💩
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div #panel5 id="panel5" style="height: 100vh; width:100vw;color: chartreuse">
+          <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-6 mx-auto">
+                      <div class="jumbotron">
+                          I'm vertically centered
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div appParallax [ratio]="0.5" id="rectangle"></div>
